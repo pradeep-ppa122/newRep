@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerLSonprem",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=LAPTOP-OMPFO813\\SQLEXPRESS;initial catalog=MyDatabase",
+			"userName": "LAPTOP-OMPFO813\\HP",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjNDNlNGYwNS1kMTQxLTRiMDEtOTkyZi1hNjdiMzE2ZTQ4ZmUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

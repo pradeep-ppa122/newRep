@@ -1,0 +1,29 @@
+{
+	"name": "event_trigger",
+	"properties": {
+		"description": "event_trigger",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "triggerdemo",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"FileName": "@triggerBody().fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/input/blobs/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/f3de3e51-b2da-476f-83dc-af62edc06b7a/resourceGroups/nsg2/providers/Microsoft.Storage/storageAccounts/ppa122sa1",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
